@@ -25,12 +25,12 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content:center;
+  align-items:flex-end;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
-  position: fixed;
+  border-bottom: 5px solid #513c28;
+  position:fixed;
   top: 0;
   left: 0;
   right: 0;
