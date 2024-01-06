@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir WhatsApp</title>
+</head>
+<body>
+
+    <h2>Mau Pesan Apa?</h2>
+
+    <form id="whatsappForm">
+        
+        <label for="nomor">Nomor WhatsApp:</label> <br>
+        <input type="text" id="nomor" name="nomor" required> <br>
+        <label for="pesan">Pesan:</label> <br>
+        <textarea id="pesan" name="pesan" rows="2 " required></textarea> <br>
+
+
+        <button type="button" onclick="kirimPesan()">Kirim Pesan</button> 
+    </form>
+
+    <script>
+        function kirimPesan() {
+            var nomorWhatsApp = document.getElementById('nomor').value;
+            var pesan = document.getElementById('pesan').value;
+            var linkWhatsApp = 'https://wa.me/' + nomorWhatsApp + '?text=' + encodeURIComponent(pesan);
+            
+            window.location.href = linkWhatsApp;
+        }
+    </script>
+
+</body>
+</html>
