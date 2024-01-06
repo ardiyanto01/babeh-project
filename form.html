@@ -12,20 +12,20 @@
 
     <form id="whatsappForm">
         
-        <label for="nomor">Nomor WhatsApp:</label> <br>
-        <input type="text" id="nomor" name="nomor" required> <br>
-        <label for="pesan">Pesan:</label> <br>
+        <label for="nomor">Pesan apa?</label> <br>
+        <input type="text" id="pesan" name="pesan" required> <br>
+        <label for="pesan">Jumlah:</label> <br>
         <textarea id="pesan" name="pesan" rows="2 " required></textarea> <br>
 
 
-        <button type="button" onclick="kirimPesan()">Kirim Pesan</button> 
+        <button type="button" onclick="kirimPesan()">Hai</button> 
     </form>
 
     <script>
         function kirimPesan() {
-            var nomorWhatsApp = document.getElementById('nomor').value;
+            var nomorWhatsApp = document.getElementById('pesan').value;
             var pesan = document.getElementById('pesan').value;
-            var linkWhatsApp = 'https://wa.me/' + nomorWhatsApp + '?text=' + encodeURIComponent(pesan);
+            var linkWhatsApp = 'https://api.whatsapp.com/send/?phone=088973121602&text=asds&type=phone_number&app_absent=0' + pesan + nomorWhatsApp;
             
             window.location.href = linkWhatsApp;
         }

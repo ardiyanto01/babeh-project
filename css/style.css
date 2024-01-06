@@ -666,4 +666,14 @@ footer .credit a {
     font-size: 55%;
   }
 }
+.contact {
+  margin-top: 20px;
+}
 
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
